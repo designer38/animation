@@ -1,0 +1,136 @@
+html {
+    overflow-y: scroll; /* Remove This Line */
+    -webkit-font-smoothing: antialiased;
+}
+body{
+  margin:0;
+  overflow-y: auto;
+   overflow-x: hidden;
+  }
+  #loader {
+	height: 1000vh;
+	width: 100%;
+	background: #16132d;
+	display: flex;
+	
+	
+	margin: 0;
+	padding: 0;
+}	
+h2{
+	text-align: center;
+	margin: 200px auto;
+	display: block;
+}	
+h2 span {
+	
+  position: relative;
+	font-size: 64px;
+	color: transparent;
+	-webkit-text-stroke: 2px rgba(255, 255, 255, 0.5);
+	font-family: sans-serif;
+
+
+letter-spacing: 22px;
+}
+h2 span:after, h2 span:before {
+	position: absolute;
+	top: 0; 
+	left: 0;
+	content: attr(data-text);
+}
+h2 span:before{
+	z-index: 10;
+	-webkit-text-stroke: 2px rgba(255, 255, 255, 1);
+	animation: animation1 1s ease-in-out infinite;
+}
+@keyframes animation1{
+	0%,100%{
+		transform: translate(0 ,0);
+	}
+50%{
+		transform: translate(40px ,-40px);
+	}
+} 
+h2 span:after{
+	z-index: 9;
+	-webkit-text-stroke: 2px rgba(255, 255, 255, 0.6);
+	animation: animation2 1s ease-in-out infinite;
+}
+@keyframes animation2{
+	0%,100%{
+		transform: translate(0 ,0);
+	}
+50%{
+		transform: translate(20px ,-20px);
+	}
+}
+h2 span:nth-child(1):before,
+h2 span:nth-child(1):after{
+	animation-delay: 0s;
+}
+
+h2 span:nth-child(2):before,
+h2 span:nth-child(2):after{
+	animation-delay: 0.1s;
+}
+h2 span:nth-child(3):before,
+h2 span:nth-child(3):after{
+	animation-delay: 0.2s;
+}
+h2 span:nth-child(4):before,
+h2 span:nth-child(4):after{
+	animation-delay: 0.3s;
+}
+h2 span:nth-child(5):before,
+h2 span:nth-child(5):after{
+	animation-delay: 0.4s;
+}
+h2 span:nth-child(6):before,
+h2 span:nth-child(6):after{
+	animation-delay: 0.5s;
+
+
+
+
+}
+  canvas{
+	  background-image: url("sharon-mccutcheon-577040-unsplash.jpg");
+	  background-size: cover;
+	  background-repeat: no-repeat;
+  border:1px solid black;
+ position:fixed;
+ top:0;
+ bottom:0;
+ z-index:-1;
+
+}
+.genbg{
+	color:white;
+	font-family: "roboto";
+	font-weight: 900;
+	width:600px;
+	background-color: #1D5875;
+	
+	padding:40px;
+	margin-bottom: 20px;
+	margin-top: 20px;
+
+}
+.final{
+	background-color: #FFCD00;
+	width:200px;
+	display:block;
+	text-align: center;
+	margin: 0 auto;
+	color:#1D5875;
+	border-radius: 0%;
+}
+.final:hover{
+	color:white;
+	background-color: #439FDE;
+	width:200px;
+	
+	color:white;
+	border-radius: 0%;
+}
